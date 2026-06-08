@@ -1,0 +1,30 @@
+function buildLawContext(text) {
+  const lower = String(text || "").toLowerCase();
+
+  // 🚨 POA TICKET RULE (FROM YOUR BOOK)
+  if (lower.includes("ticket") || lower.includes("speeding")) {
+    return `
+Provincial Offences Act (R.S.O. 1990, c. P.33)
+
+Part I — Minor Offences Procedure
+
+Key Rules:
+- Defendant has 15 calendar days to respond to an offence notice
+- If no response → conviction may be entered (s. 9(1))
+
+Options:
+1. Plead guilty (pay set fine) — s. 8
+2. Plead guilty with submissions — s. 7
+3. Early resolution meeting with prosecutor
+4. Dispute charge and request trial — s. 5
+
+Process:
+- Offence notice acts as a ticket
+- Certificate of offence is reviewed by clerk
+- If valid → conviction + fine imposed
+
+`;
+  }
+
+  return "";
+}

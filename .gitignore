@@ -1,0 +1,27 @@
+# Firebase secrets (IMPORTANT)
+.env
+.env.*
+serviceAccountKey.json
+firebase-adminsdk*.json
+
+# Firebase / build cache
+.firebase/
+.firebaserc
+firebase-debug.log
+
+# dependencies / build
+node_modules/
+dist/
+build/
+.vite/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+backend/.env
+backend/.env
+backend/.env
+.env
+backend/.env
+.env
