@@ -107,7 +107,7 @@ export default function ToolPage() {
     setOutputText("");
 
     try {
-      const response = await fetch("http://localhost:3003/api/process", {
+      const response = await fetch("https://my-backend-1-qzxx.onrender.com/api/ai", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

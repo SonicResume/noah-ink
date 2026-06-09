@@ -4,10 +4,12 @@ type UseCase =
   | "legal"
   | "product"
   | "real_estate"
-
   | "email"
   | "career"
-  | "social";
+  | "social"
+  | "marketing"
+  | "ads"
+  | "support";
 
 type ContentType = {
   id: UseCase;
@@ -15,12 +17,15 @@ type ContentType = {
 };
 
 export const contentTypes: ContentType[] = [
-  { id: "legal", label: "Legal" },
-  { id: "product", label: "Product Description" },
-  { id: "real_estate", label: "Real Estate" },
+  { id: "legal", label: "Legal Assistant" },
+  { id: "product", label: "Product Copy" },
+  { id: "real_estate", label: "Real Estate Listing" },
   { id: "email", label: "Professional Email" },
-  { id: "career", label: "Career" },
-  { id: "social", label: "Social Media" }
+  { id: "career", label: "Career Tools" },
+  { id: "social", label: "Social Media Content" },
+  { id: "marketing", label: "Marketing Strategy" },
+  { id: "ads", label: "Ad Copy" },
+  { id: "support", label: "Customer Support" }
 ];
 
 type Props = {

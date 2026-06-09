@@ -21,7 +21,7 @@ export default function ContactPage() {
     setLoading(true);
 
     try {
-      await fetch("http://localhost:3001/api/contact", {
+      await fetch("https://my-backend-a42n.onrender.com/api/ai", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
