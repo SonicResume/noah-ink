@@ -1,15 +1,21 @@
-// src/react-app/components/ContentTypeSelector.tsx
-type UseCase =
-
+export type UseCase =
   | "legal"
-  | "product"
   | "real_estate"
   | "email"
   | "career"
   | "social"
   | "marketing"
   | "ads"
-  | "support";
+  | "support"
+  | "flowcharts"
+  | "comparisons"
+  | "video_reviews"
+  | "listicles"
+  | "seasonal_content"
+  | "case_studies"
+  | "ebooks"
+  | "collaborations"
+  | "quote_cards";
 
 type ContentType = {
   id: UseCase;
@@ -18,14 +24,23 @@ type ContentType = {
 
 export const contentTypes: ContentType[] = [
   { id: "legal", label: "Legal Assistant" },
-  { id: "product", label: "Product Copy" },
   { id: "real_estate", label: "Real Estate Listing" },
   { id: "email", label: "Professional Email" },
   { id: "career", label: "Career Tools" },
   { id: "social", label: "Social Media Content" },
   { id: "marketing", label: "Marketing Strategy" },
   { id: "ads", label: "Ad Copy" },
-  { id: "support", label: "Customer Support" }
+  { id: "support", label: "Customer Support" },
+
+  { id: "flowcharts", label: "Flowcharts & Checklists" },
+  { id: "comparisons", label: "Comparisons" },
+  { id: "video_reviews", label: "Video Reviews & Testimonials" },
+  { id: "listicles", label: "Listicles" },
+  { id: "seasonal_content", label: "Seasonal Content" },
+  { id: "case_studies", label: "Case Studies & Use Cases" },
+  { id: "ebooks", label: "eBooks & Whitepapers" },
+  { id: "collaborations", label: "Collaborations & Partnerships" },
+  { id: "quote_cards", label: "Quote Cards" }
 ];
 
 type Props = {

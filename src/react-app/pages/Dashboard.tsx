@@ -107,7 +107,9 @@ export default function ToolPage() {
     setOutputText("");
 
     try {
-      const response = await fetch("https://my-backend-1-qzxx.onrender.com/api/ai", {
+      const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/ai`,
+      {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -294,4 +296,3 @@ export default function ToolPage() {
     </div>
   );
 }
-
