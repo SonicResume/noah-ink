@@ -1,8 +1,8 @@
-// src/react-app/pages/Login.tsx
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Home } from "lucide-react";
-import { auth } from "@/firebase";
+import { auth } from "../firebase";
+
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -70,7 +70,7 @@ export default function AuthPage() {
       
       {/* 🧭 HOME NAV */}
       <nav className="absolute top-8 left-8 z-50">
-        <Link to="/" className="flex items-center gap-2 px-5 py-2.5 bg-white border border-slate-200 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-blue-600 shadow-sm transition-all hover:-translate-y-0.5 active:scale-95">
+        <Link to="/" className="flex items-center gap-2 px-5 py-2.5 bg-white border border-slate-200 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-purple-600 shadow-sm transition-all hover:-translate-y-0.5 active:scale-95">
           <Home size={14} /> Home
         </Link>
       </nav>
@@ -84,7 +84,7 @@ export default function AuthPage() {
             <img src="/logo.png" alt="NOAH" className="w-10 h-10 object-contain" />
           </div>
           <h1 className="text-3xl font-black italic tracking-tighter uppercase text-slate-900">
-            Noah <span className="text-blue-600">Ink</span>
+            Noah <span className="text-purple-600">Ink</span>
           </h1>
           <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mt-2">
             Secure Neural Access 
@@ -100,7 +100,7 @@ export default function AuthPage() {
               onClick={() => setMode(m as Mode)}
               className={`flex-1 py-3 text-[9px] font-black uppercase tracking-widest rounded-xl transition-all ${
                 mode === m
-                  ? "bg-white shadow-md text-blue-600"
+                  ? "bg-white shadow-md text-purple-600"
                   : "text-slate-400 hover:text-slate-600"
               }`}
             >
@@ -145,21 +145,25 @@ export default function AuthPage() {
               {loading ? "Syncing..." : mode === "login" ? "Authorize Access" : mode === "signup" ? "Create Identity" : "Bypass Security"}
             </button>
 
-            <button
-              onClick={google}
-              className="w-full border border-slate-200 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-slate-50 transition-all active:scale-95 flex items-center justify-center gap-3"
-            >
-              <img src="https://gstatic.com" className="w-[18px] h-[18px]" alt="G" />
-              Sync Google
-            </button>
+           <button
+            onClick={google}
+            className="w-full border border-slate-200 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-slate-50 transition-all active:scale-95 flex  items-center justify-center gap-3"
+         >
+          <img
+            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+            className="w-[18px] h-[18px]"
+            alt="Google"
+           />
+          Sync Google
+         </button>
           </div>
         </div>
 
         {/* COMPLIANCE FOOTER */}
         <div className="mt-10 pt-6 border-t border-slate-50">
           <div className="flex justify-center gap-6 text-[9px] font-black text-slate-300 uppercase tracking-[0.2em]">
-            <Link to="/privacy" className="hover:text-blue-600 transition-colors">Privacy</Link>
-            <Link to="/terms" className="hover:text-blue-600 transition-colors">Terms</Link>
+            <Link to="/privacy" className="hover:text-purple-600 transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-purple-600 transition-colors">Terms</Link>
           </div>
         </div>
       </div>
