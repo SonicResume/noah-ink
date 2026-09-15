@@ -1,93 +1,136 @@
-# Noa Ink
+# Noah Ink
 
-Noa Ink is an AI-powered writing workspace for turning rough, messy, or incomplete text into polished, usable copy.
+Noa Ink is an AI-powered writing and content transformation workspace designed to turn rough, incomplete, or unpolished text into finished copy.
 
-## What it does
+## What It Does
 
-Noa Ink provides six focused content engines from one dashboard:
+Noa Ink provides six specialized content engines:
+Use Case: Legal Assistant, Real Estate Listing, Professional Email, Career Tools, Social Media Content, Marketing Strategy, Ad Copy, Customer Support, Flowcharts & Checklists, Comparisons, Video Reviews & Testimonials, Listicles, Seasonal Content, Case Studies & Use Cases, eBooks & Whitepapers, Collaborations & Partnerships, Quote Cards
+Tools: Optimize, Expand, Shorten, Fix, Style, Translate
+Source Text
+Generate Optimization
+Optimized Result
 
-- Career Matrix — resumes, cover letters, and professional histories
-- Email Protocol — professional emails, pitches, and corporate communications
-- Legal Scope — objective legal-style arguments, notices, and policy summaries
-- Product Block — product descriptions, landing-page copy, and advertising hooks
-- Property Frame — polished real-estate listing copy
-- Social Vault — social hooks, structured posts, and hashtag-ready content
+### Writing Transformations
 
-Each engine supports:
+Users can:
 
-- Rewrite / improve
-- Expand
-- Shorten / summarize
-- Grammar correction
-- Tone adjustment
-- Translation
+* Rewrite and improve existing text
+* Expand short or incomplete content
+* Shorten and summarize
+* Correct grammar
+* Adjust tone
+* Translate content into another language
 
 ## Workspace
 
-Users can enter or paste source text, select a content type and transformation, choose a tone or language when applicable, generate a result, then copy or download it.
+The main dashboard lets users:
 
-Text and Markdown file input are also supported.
+1. Enter or paste source text.
+2. Select a content type.
+3. Select a transformation.
+4. Choose a tone or language when applicable.
+5. Generate the transformed content.
+6. Copy or download the result.
+
+Supported text-file input includes `.txt` and `.md` files.
+
+The workspace accepts up to 10,000 characters of source text.
 
 ## Technology
 
-- React
-- Vite
-- TypeScript
-- Node.js
-- Express
-- AI processing
-- Firebase Authentication
-- Stripe subscriptions
-- SQLite / better-sqlite3
-- Tailwind CSS
-- Lucide React
+### Frontend
 
-## Local development
+* React
+* TypeScript
+* Vite
+* React Router
+* Tailwind CSS
+* Firebase Authentication
+* Lucide React
 
-Install frontend dependencies:
+### Backend / Services
 
-    npm install
+The project contains backend service code and integrations for:
+
+* AI processing
+* Stripe
+* Email delivery
+* SQLite
+* File processing
+* Firebase
+
+The production application connects to its deployed API through the `VITE_API_URL` environment variable.
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
 
 Start the frontend:
 
-    npm run dev
+```bash
+npm run dev
+```
 
-Install backend dependencies:
+Create a production build:
 
-    cd backend
-    npm install
+```bash
+npm run build
+```
 
-Start the backend:
+Preview the production build:
 
-    npm start
+```bash
+npm run preview
+```
 
-## Production build
+Run the project checks:
 
-From the project root:
+```bash
+npm run check
+```
 
-    npm run build
+## Environment Variables
 
-## Environment variables
+Environment files containing secrets or deployment-specific configuration are intentionally excluded from Git.
 
-Secrets and environment-specific configuration belong in .env files and must not be committed.
+Do not commit API keys, Stripe secrets, Firebase service credentials, or other private credentials.
 
-## Runtime data
+For the frontend, configure:
 
-User databases and runtime user data are intentionally excluded from Git. The backend initializes its SQLite database automatically when required.
+```text
+VITE_API_URL=
+```
 
-## Commercial deployment
+The deployed environment should provide the appropriate production API URL.
 
-Before production release:
+## Runtime Data
 
-- Configure production API URLs.
-- Configure production Firebase authentication.
-- Configure Stripe production products and checkout settings.
-- Configure production AI credentials securely.
-- Configure email delivery credentials.
-- Review legal, privacy, and terms pages.
-- Verify authentication and authorization flows.
-- Run the production build and deployment checks.
+Local runtime data such as the user database and generated runtime user data are excluded from Git.
+
+This keeps user-specific data and local state out of the source repository while allowing the application to create its required runtime storage.
+
+## Production Checklist
+
+Before deploying a commercial instance:
+
+* Configure production environment variables.
+* Configure Firebase Authentication.
+* Configure Stripe products and prices.
+* Configure the deployed API URL.
+* Configure email delivery.
+* Verify AI provider credentials.
+* Verify API rate limiting.
+* Test authentication and account flows.
+* Test Stripe checkout and subscription flows.
+* Test file upload and content generation.
+* Verify production error handling.
+* Confirm no secrets are committed to Git.
 
 ## License
 
-MIT License
+MIT
