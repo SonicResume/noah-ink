@@ -26,3 +26,7 @@ backend/.env
 backend/.env
 .env
 .vercel
+
+# Runtime user data
+backend/users.db
+backend/users.json
